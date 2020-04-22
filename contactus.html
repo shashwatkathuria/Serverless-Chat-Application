@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="portfolioApp">
+<html lang="en" ng-app="serverlessChatApp">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -11,9 +11,12 @@
 		    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
         <script type="text/javascript" src="js/angular/app.js"></script>
         <script type="text/javascript" src="js/angular/main-navbar/main-navbar.component.js"></script>
         <script type="text/javascript" src="js/angular/footer-details/footer-details.component.js"></script>
+        <script type="text/javascript" src="js/angular/contact-us-details/contact-us-details.component.js"></script>
 
         <link rel="stylesheet" href="stylesheets/main.css">
 
@@ -24,40 +27,10 @@
 <body>
 
     <main-navbar></main-navbar>
+    
+    <contact-us-details></contact-us-details>
 
-	<div class="jumbotron jumbotron-fluid">
-			<div class="container">
-
-
-				<h1 class="lead" style="font-size:40px;">Contact Us</h1>
-
-        <div style="text-align:left;">
-
-          <h3><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbspAddress</h3>
-          <hr />
-          <p class="lead"> IIT Jodhpur, Karwar, Jodhpur, Rajasthan</p>
-          <button type="button" class="btn btn-info">Pin Code : 342037</button>
-
-          <br>
-          <br>
-
-          <h3><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>&nbspEmail</h3>
-          <hr />
-          <p class="lead">Suggestions and feedback are thoroughly welcomed.</p>
-          <button type="button" class="btn btn-info">Mail To : <a class="buttonLink" href="mailto:serverlesschatapp@xyz.com" >socialcloud@xyz.com</a></button>
-          <br>
-          <br>
-
-          <h3 ><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbspDevelopment Team Contact Numbers</h3>
-          <hr />
-          <p class="lead">Please feel free to call us anytime, 24 x 7.</p>
-          <button type="button" class="btn btn-info">Contact Numbers : <a href="tel:0101-11111111" >0101-11111111</a>,<a href="tel:0101-22222222">0101-22222222</a></button>
-          <br>
-          <br>
-        </div>
-
-			</div>
-	</div>
+    <br><br><br><br>
 
     <footer-details></footer-details>
 
