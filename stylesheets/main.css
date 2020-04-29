@@ -1,0 +1,85 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  background-image: url("./../images/i12.jpg");
+  background-size: auto auto;
+}
+
+footer-details {
+  background-color: black;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  padding: 25px;
+  overflow: hidden;
+}
+
+footer-details img {
+  height: 20px;
+}
+
+.form-control{
+  text-align:center;
+}
+
+.jumbotron {
+  margin: 0 auto;
+  background:rgba(200,200,200,0.5);
+  margin:25px;
+  text-align:center;
+}
+main-navbar img {
+  height: 50px;
+}
+
+.navbar-brand h2 {
+  color: black;
+  text-align: center;
+  font-size: 35px;
+}
+
+.nav-link.lead {
+  color: black !important;
+  font-size: 20px !important;
+}
+
+a.nav-link:hover {
+  color: white !important;
+}
+
+#firstDivider{
+  margin-top: 0px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0px;
+}
+
+a.btn.btn-primary{
+  margin-top: 1%;
+  color: white !important;
+}
+
+.card.text-center{
+  height:100%;
+}
+
+.row .col-sm-6{
+  margin-top: 3%;
+}
+
+.row .col-sm-12{
+  margin-top: 3%;
+}
+
+@media screen and (min-width: 699px) {
+  #breakit{
+    display:none
+  }
+}
