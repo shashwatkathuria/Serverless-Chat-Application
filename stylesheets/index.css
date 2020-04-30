@@ -1,0 +1,19 @@
+body {
+  color: black;
+  text-align: center;
+}
+
+div.col-sm-4 {
+  margin-top: 2%;
+  text-align: center;
+}
+
+div.col-sm-6 {
+  margin-top: 2%;
+  text-align: center;
+}
+
+div.col-sm-12 {
+  margin-top: 2%;
+  text-align: center;
+}
