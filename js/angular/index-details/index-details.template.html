@@ -1,0 +1,115 @@
+<div class="jumbotron" ng-if="!isLoggedIn">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1 class="display-4">Hey there!<br>Haven't registered yet?!</h1>
+      <p class="lead">Register yourself today and start chatting!</p>
+    </div>
+
+    <div class="col-sm-4">
+      <img src="images/p9.png" width="100%">
+    </div>
+
+  </div>
+
+  <hr class="my-4">
+  <p>You must have a valid email address.</p>
+  <a class="btn btn-primary btn-lg" href="register.html" role="button">Register</a>
+
+</div>
+
+<div class="jumbotron">
+
+  <div class="row">
+
+    <div class="col-sm-4">
+
+      <h1 class="display-4">Start Chatting!</h1>
+      <p class="lead" ng-if="!isLoggedIn">Click below to Sign In</p>
+      <p class="lead" ng-if="isLoggedIn">Click below to Chat</p>
+      <hr class="my-4">
+      <a class="btn btn-primary btn-lg" href="signin.html" role="button" ng-if="!isLoggedIn">Sign In</a>
+      <a class="btn btn-primary btn-lg" href="personalchat.html" role="button" ng-if="isLoggedIn">Personal Chat</a>
+      <a class="btn btn-primary btn-lg" href="groupchat.html" role="button" ng-if="isLoggedIn">Group Chat</a>
+
+    </div>
+
+    <div class="col-sm-4">
+      <img src="images/p5.png" style="width:inherit;">
+    </div>
+
+    <div class="col-sm-4">
+
+      <h1 class="display-4">Have Queries?</h1>
+      <p class="lead">Click below for our contacts</p>
+      <hr class="my-4">
+      <a class="btn btn-primary btn-lg" href="contactus.html" role="button">Contact Us</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="jumbotron">
+
+  <h1 class ="display-3">Features</h1>
+  <hr class="my-4">
+
+  <div class="row">
+
+    <div class="col-sm-12">
+
+      <h1 class="display-4">Both, Personal & Group Chat!</h1>
+      <hr>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="images/p25.png" style="width: 70%;" alt="">
+          </div>
+          <div class="col-sm-6">
+            <img src="images/p26.png" style="width: 50%;" alt="">
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="row">
+
+    <div class="col-sm-6">
+
+      <h1 class="display-4">Free of Cost!</h1>
+      <hr>
+      <img src="images/p7.png" style="width: 60%;" alt="">
+
+    </div>
+
+    <div class="col-sm-6">
+
+      <h1 class="display-4">Connect with People!</h1>
+      <hr>
+      <br>
+      <img src="images/p6.png" style="width: inherit;" alt="">
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-12">
+
+      <h1 class="display-4">Fast Communication!</h1>
+      <hr>
+      <img src="images/p27.png" style="width: 30%;" alt="">
+
+    </div>
+
+  </div>
+
+  <br>
+
+</div>
