@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent" >
+  <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+        <a class="navbar-brand" href="./index.html"><h2 class="lead">Serverless Chat App</h2></a>
+        <img src="images/p5.png">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+                <a class="nav-link lead" href="index.html" >Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link lead" href="register.html" ng-if="!(isLoggedIn)" >Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link lead" href="signin.html" ng-if="!(isLoggedIn)" >Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link lead" href="personalchat.html" ng-if="(isLoggedIn)" >Personal Chat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link lead" href="groupchat.html" ng-if="(isLoggedIn)" >Group Chat</a>
+            </li>
+            <li class="nav-item">
+                <a id="signOut" class="nav-link lead" href="#" ng-if="(isLoggedIn)" ng-click="signOut()">Sign Out</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link lead" href="contactus.html" >Contact Us</a>
+            </li>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<hr id="firstDivider">
