@@ -1,0 +1,111 @@
+<div class="jumbotron">
+
+    <div class="row">
+
+      <div class="col-sm-6">
+          <div class="row">
+              <div class="col-sm-3">
+                  <img src="images/p15.png" width="70%" style="float:right" alt="">
+              </div>
+              <div class="col-sm-9">
+                  <h1>Chat with Friends!</h1>
+                  <p class="lead">Choose a Friend!</p>
+              </div>
+          </div>
+        <hr class="my-4">
+        <select class="custom-select" id="friendsList">
+            <option selected>Choose Friend To Chat</option>
+            <option ng-repeat="friend in friends" value="{{ friend }}">{{ friend }}</option>
+        </select>
+        <br>
+        <br>
+        <span class="input-group-text explanation">
+            <small>Choose friend from dropdown if already added.</small>
+        </span>
+      </div>
+
+      <div class="col-sm-6">
+          <div class="row">
+              <div class="col-sm-9">
+                  <h1>New Friend? Add them!</h1>
+                  <p class="lead">Enter their email & Send a message!</p>
+              </div>
+              <div class="col-sm-3">
+                  <img src="images/p14.png" width="70%" style="float:left" alt="">
+              </div>
+          </div>
+          <hr class="my-4">
+          <div class="form-group">
+              <input type="text" class="form-control" id="newFriendInput" aria-describedby="emailHelp" placeholder="Enter Email">
+          </div>
+          <form>
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <small>Press Enter or<hr class="line">Click 'Add Friend'<hr class="line"> to Add New Friend</small>
+                      </span>
+                  </div>
+                  <input type="text" class="form-control newAddInput" id="newFriendMessageInput" placeholder="Enter a message">
+                  <input type="submit" class="btn btn-primary newAddButton" ng-click="newPersonalChatMessage()" value="Add Friend">
+              </div>
+          </form>
+          <br>
+          <div class="alert alert-success" role="alert" ng-if="pendingFriendAdded != ''">
+            {{ pendingFriendAdded }} added to friends list successfully!
+          </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+<div class="jumbotron jumbotron-fluid" id="chatJumbotron">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h1 style="float:right">Personal Chat Here!</h1>
+            </div>
+            <div class="col-sm-4">
+                <img src="images/p16.png" width="10%" style="float:left" alt="">
+            </div>
+        </div>
+
+        <small ng-if="currentChat != ''">Currently chatting with <u><b>{{ currentChat }}</b></u></small>
+        <div class="alert alert-warning" role="alert" ng-if="currentChat == ''">
+          <b>Please Select a Friend to Chat with.</b>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <small>Press Enter or<hr class="line">Click 'Send Message' to submit</small>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control newAddInput" id="messageInput" placeholder="Enter your message">
+                        <input type="submit" class="btn btn-primary newAddButton" ng-click="sendPersonalChatMessage()" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+
+        <div ng-repeat="message in messages" class="chat">
+            <div class="row">
+                <div class="{{ message.isSender ? '' : 'ml-auto mr-3' }} alert alert-{{ getMessageColor(message) }} chat-message" role="alert">
+                    <b>{{ message.Message }}</b>
+                    <br>
+                    <small>{{ timeDifference(message.RequestTime) }} ago | {{ getTime(message.RequestTime) }} <br> <b>{{ message.isSender ? 'You' : message.Sender }}</b></small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
