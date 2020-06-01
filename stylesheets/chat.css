@@ -1,0 +1,29 @@
+.explanation {
+  justify-content: center;
+}
+
+hr.line {
+  margin: 0;
+  padding: 0;
+}
+
+select.custom-select {
+  text-align-last: center;
+}
+
+input.newAddInput {
+  text-align: left;
+  height: 70px;
+}
+
+input.newAddButton {
+  margin-left: 15px;
+}
+
+div.chat {
+  width: 100% !important;
+}
+
+div.chat-message {
+  width: fit-content;
+}
