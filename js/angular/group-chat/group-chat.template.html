@@ -1,0 +1,111 @@
+<div class="jumbotron">
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="images/p15.png" width="70%" style="float:right">
+                </div>
+                <div class="col-sm-9">
+                    <h1>Chat in Chat Rooms!</h1>
+                    <p class="lead">Choose a Chat Room!</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <select class="custom-select" id="chatRoomsList">
+                <option selected>Choose Chat Room To Chat</option>
+                <option ng-repeat="chatRoom in chatRooms" value="{{ chatRoom }}">{{ chatRoom }}</option>
+            </select>
+            <br>
+            <br>
+            <span class="input-group-text explanation">
+                <small>Choose chat room from dropdown if already joined.</small>
+            </span>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h1>Join a New Chat Room!</h1>
+                    <p class="lead">Send a message!</p>
+                </div>
+                <div class="col-sm-3">
+                    <img src="images/p14.png" width="70%" style="float:left">
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="newChatRoomInput" aria-describedby="emailHelp" placeholder="Enter Chat Room Name">
+            </div>
+            <form>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <small>Press Enter or<hr class="line">Click 'Send Message'<hr class="line"> to Add New Friend</small>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control newAddInput" id="newChatRoomMessageInput" placeholder="Enter a message">
+                    <input type="submit" class="btn btn-primary newAddButton" ng-click="newChatRoomMessage()" value="Join Chat Room">
+                </div>
+            </form>
+            <br>
+            <div class="alert alert-success" role="alert" ng-if="pendingChatRoomAdded != ''">
+              {{ pendingChatRoomAdded }} added to chat rooms list successfully!
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="jumbotron jumbotron-fluid" id="chatJumbotron">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h1 style="float:right">Group Chat Here!</h1>
+            </div>
+            <div class="col-sm-4">
+                <img src="images/p16.png" width="10%" style="float:left">
+            </div>
+        </div>
+
+        <small ng-if="currentChat != ''">Currently chatting in Chat Room <u><b>{{ currentChat }}</b></u></small>
+        <div class="alert alert-warning" role="alert" ng-if="currentChat == ''">
+          <b>Please Select a Chat Room to Chat in.</b>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <small>Press Enter or<hr class="line">Click 'Send Message' <hr class="line"> to submit</small>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control newAddInput" id="messageInput" placeholder="Enter your message">
+                        <input type="submit" class="btn btn-primary newAddButton" ng-click="sendChatRoomMessage()" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+      <hr>
+
+      <div ng-repeat="message in messages" class="chat">
+          <div class="row">
+              <div class="{{ message.isSender ? '' : 'ml-auto mr-3' }} alert alert-{{ getMessageColor(message) }} chat-message" role="alert">
+                  <b>{{ message.Message }}</b>
+                  <br>
+                  <small>{{ timeDifference(message.RequestTime) }} ago | {{ getTime(message.RequestTime) }} <br> <b>{{ message.isSender ? 'You' : message.Sender }}</b></small>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+</div>
