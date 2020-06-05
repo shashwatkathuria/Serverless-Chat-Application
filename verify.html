@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="portfolioApp">
+<html lang="en" ng-app="serverlessChatApp">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
         <script type="text/javascript" src="js/angular/app.js"></script>
         <script type="text/javascript" src="js/angular/main-navbar/main-navbar.component.js"></script>
@@ -27,34 +29,39 @@
 
     <main-navbar></main-navbar>
 
-	<div class="jumbotron jumbotron-fluid">
-			<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
 
-        <section class="form-wrap">
 
-            <h1>Verify Email</h1>
+            <h1 class="display-4">Verify Email</h1>
             <hr>
+            <div class="row">
 
-            <form id="verifyForm">
+                <div class="col-sm-2">
+                    <img src="images/p18.png" width="70%">
+                </div>
 
-              <div class="form-group">
-                <label for="emailInputVerify">Email Address</label>
-                <input type="email" class="form-control" id="emailInputVerify" placeholder="Email" required aria-describedby="emailHelp">
-              </div>
+                <div class="col-sm-10">
+                    <form id="verifyForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="emailInputVerify" placeholder="Enter Email" required aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="codeInputVerify" placeholder="Enter Verification Code" pattern=".*" required>
+                        </div>
+                        <input type="submit" class="btn btn-info" value="Verify">
+                    </form>
+                </div>
 
-              <div class="form-group">
-                <label for="codeInputVerify">Verification Code</label>
-                <input type="text" class="form-control" id="codeInputVerify" placeholder="Verification Code" pattern=".*" required>
-              </div>
-              <input type="submit" class="btn btn-info" value="Verify">
+            </div>
+            <hr>
+            <p class="lead">Completed Signing Up & Verifying Email?<br>Sign In & Start Chatting!</p>
+            <a href="signin.html" class="btn btn-info" role="button">Sign In Here</a>
 
-            </form>
+        </div>
+    </div>
 
-        </section>
-
-			</div>
-	</div>
-
+    <footer-details></footer-details>
 
     <script src="js/vendor/jquery-3.1.0.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
@@ -63,7 +70,6 @@
     <script src="js/config.js"></script>
     <script src="js/cognito-auth.js"></script>
 
-    <footer-details></footer-details>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

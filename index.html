@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="portfolioApp">
+<html lang="en" ng-app="serverlessChatApp">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -11,82 +11,29 @@
 		    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
         <script type="text/javascript" src="js/angular/app.js"></script>
         <script type="text/javascript" src="js/angular/main-navbar/main-navbar.component.js"></script>
         <script type="text/javascript" src="js/angular/footer-details/footer-details.component.js"></script>
+        <script type="text/javascript" src="js/angular/index-details/index-details.component.js"></script>
 
         <script src="js/vendor/modernizr.js"></script>
 
         <link rel="stylesheet" href="stylesheets/main.css">
+        <link rel="stylesheet" href="stylesheets/index.css">
 
         <title>Serverless Chat App</title>
 
     </head>
 
-<body style="color:black; text-align:center;">
+<body>
 
     <main-navbar></main-navbar>
 
-          <div class="jumbotron">
-              <h1 class="display-4">Hey there! Haven't registered yet?!</h1>
-              <p class="lead">Register yourself today and start chatting!</p>
-              <hr class="my-4">
-              <p>You must have a valid email address.</p>
-              <a class="btn btn-primary btn-lg" href="register.html" role="button">Register</a>
-          </div>
-
-          <div class="jumbotron">
-
-            <div class="row">
-
-              <div class="col-sm-6" style = "margin-top:2%;text-align:center;">
-
-                <h1 class="display-4">Start Chatting!</h1>
-                <p class="lead">Click on the button below to Log In</p>
-                <hr class="my-4">
-                <a class="btn btn-primary btn-lg" href="signin.html" role="button">Sign In</a>
-
-              </div>
-
-              <div class="col-sm-6" style = "margin-top:2%;text-align:center;">
-
-                <h1 class="display-4">Have Queries?</h1>
-                <p class="lead">Click on the below button for our contacts</p>
-                <hr class="my-4">
-                <a class="btn btn-primary btn-lg" href="contact.html" role="button">Contact Us</a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="jumbotron" style="margin: 0 auto;background:rgba(200,200,200,0.5);margin:25px;">
-
-            <h1 class ="display-3" style="text-align:center;">Features</h1>
-            <hr class="my-4">
-
-            <div class="row">
-
-              <div class="col-sm-6" style = "margin-top:2%;text-align:center;">
-
-                <h1 class="display-4">Free of Cost!</h1>
-                <img src="./extra_images/wr-home-block-3.png" alt="">
-
-              </div>
-
-              <div class="col-sm-6" style = "margin-top:2%;text-align:center;">
-
-                <h1 class="display-4">Connect with People!</h1>
-                <img src="./extra_images/wr-home-block-4.png" alt="">
-
-              </div>
-
-            </div>
-
-            <br>
-
-          </div>
+    <index-details></index-details>
+    
+    <br><br><br><br>
 
     <footer-details></footer-details>
 
